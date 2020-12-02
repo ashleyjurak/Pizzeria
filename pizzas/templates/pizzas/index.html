@@ -1,10 +1,19 @@
 {% extends "pizzas/base.html" %}
 
 
-{% block content%}
+{% block page_header %}
+    <div class="jumbotron">
+        <h1 class="display-3">Order your pizza here!</h1>
 
-<p>Pizzeria</p>
+        <p class="lead">Select your pizza and toppings. Write a comment
+            reviewing the pizza you ordered.</p>
 
-<p>Order your pizza here!</p>
+        <a class="btn btn-lg btn-primary" href="{% url 'pizzas:pizzas' %}"
+            role="button">Pizzas &raquo;</a>
+    </div>
 
-{% endblock content %}
+    <p>
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png" alt="Pizza">
+    </p>
+
+{% endblock page_header %}
